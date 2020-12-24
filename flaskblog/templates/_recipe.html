@@ -1,0 +1,14 @@
+<table>
+    <tr valign="top">
+        <article class="media content-section">
+          <img class="rounded-circle account-img" src="{{ url_for('static', filename='recipe_pics/' + recipe.image_file) }}">
+          <div class="media-body">
+            <div class="article-metadata">
+              <small class="text-muted">{{ recipe.date_posted.strftime('%Y-%m-%d') }}</small>
+            </div>
+            <h2><a class="article-title" href="{{ url_for('recipe', recipe_id=recipe.id) }}">{{ recipe.name }}</a></h2>
+            <p class="article-content">Ingredients: {{ recipe.ingredients }}</p>
+          </div>
+        </article>
+    </tr>
+</table>
